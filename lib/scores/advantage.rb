@@ -44,4 +44,3 @@ module Scores
     end
   end
 end
-

@@ -21,11 +21,11 @@ module Scores
       player1_points.zero? && player2_points.zero?
     end
 
-    private
-
     def score
       raise NotImplementedError
     end
+
+    private
 
     def new_score
       raise NotImplementedError
@@ -87,4 +87,3 @@ module Scores
     end
   end
 end
-

@@ -8,6 +8,8 @@ module Scores
   class Tie < Scores::Base
     include Scores::Common
 
+    TIE_BREAK = 'tie-break:'
+
     def initialize(player1_points:, player2_points:, player1_name:, player2_name:)
       super(
         player1_points: player1_points,
@@ -18,7 +20,7 @@ module Scores
     end
 
     def score
-      "tie-break: #{player1_points} - #{player2_points}"
+      "#{TIE_BREAK} #{player1_points} - #{player2_points}"
     end
 
     private

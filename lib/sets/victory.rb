@@ -4,6 +4,8 @@ require 'sets/base'
 
 module Sets
   class Victory < Sets::Base
+    HAS_WON = 'has won!'
+
     def initialize(
       player1_name:,
       player2_name:,
@@ -29,7 +31,7 @@ module Sets
     end
 
     def score
-      "#{player1_games} - #{player2_games}, #{winner} has won!"
+      "#{player1_games} - #{player2_games}, #{winner} #{HAS_WON}"
     end
 
     def winner
